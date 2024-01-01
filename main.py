@@ -6,7 +6,12 @@ stats_combined = {}
 #final_json_path = os.path.join(BASE_DIR, "ur_combined_stats")
 
 def find_stats_folders(folder): #search and find all json files in /saves folder and copy it into the stats_folder
- #   folder = os.path.join(folder, "saves") #C:\Users\jerem\AppData\Roaming\.minecraft\saves
+
+    while "saves" in folder: #debugging possible wrong user input path
+        folder = input("Please remove the \"/folder\" at the end of your minecraft path\n>")
+    while not ".minecraft" in folder: #debugging possible wrong user input path
+        folder = input("Please input a valid minecraft path.\n>")
+
     file = os.listdir(folder)
     print(f"map folders = {file}")
 
@@ -33,7 +38,7 @@ def final_exec():
         
         json_check = os.listdir(BASE_DIR) #check if there are already a .json generated at the base dir
 
-        count_json = 0 #for loop for counting the number of possible .json files in base_dir. | note: json_check.count(".json") doesn't worked
+        count_json = 0 #for loop for counting the number of possible .json files in base_dir. | see (1) | note: json_check.count(".json") doesn't worked
         for file_name in json_check:
             if ".json" in file_name:
                 count_json += 1
@@ -42,7 +47,7 @@ def final_exec():
         print(f"count_json = {count_json}")
         print(f"json_check = {json_check}")
 
-        for json_type in json_check: #
+        for json_type in json_check: # (1)
             if ".json" in json_type:
                 duplicate_player_uuid_file_name = player_uuid + str(count_json)
                 with open(os.path.join(BASE_DIR, duplicate_player_uuid_file_name), "w") as f:
@@ -120,7 +125,7 @@ def combine_stats(folder):
 
 
 
-print("##### Welcome to my Minecraft stats combiner. #####\n")
+print("##### Welcome to my Minecraft stats combiner. #####\nYou can use ALT+C at any time to stop the script.\n")
 print("How are you importing the stats files ?")
 main_input = input("Please enter 1 if you put them in the stats_folder, enter 2 if you want to import your minecraft folder.\n>")
 
