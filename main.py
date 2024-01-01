@@ -112,18 +112,17 @@ def combine_stats(folder):
 
                 for stat in json_buffer["stats"][category]:
                     #print(f"stat type = {type(stat)} | stat = {stat}")
-
-                    if stats_combined["stats"][category].get(stat) != None: #si il y a match entre les deux dicts
-                        #print(f"The stat : {stat} is getting combined...")
-                        stats_combined["stats"][category][stat] += json_buffer["stats"][category][stat]
-                    
+                    #fix temporaire /!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\
+                    try:
+                        if stats_combined["stats"][category].get(stat) != None: #si il y a match entre les deux dicts
+                            #print(f"The stat : {stat} is getting combined...")
+                            stats_combined["stats"][category][stat] += json_buffer["stats"][category][stat]
+                    except Exception:
+                        pass
+    
                     else:
                         stats_combined["stats"][category][stat] = json_buffer["stats"][category][stat]
             print(f"{file} was effectively combined.")
-
-
-
-
 
 print("##### Welcome to my Minecraft stats combiner. #####\nYou can use ALT+C at any time to stop the script.\n")
 print("How are you importing the stats files ?")
