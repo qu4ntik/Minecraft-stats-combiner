@@ -8,8 +8,10 @@ Can maybe be a bit buggy but the main fonctionality is working fine (locally at 
 #################################### How it's working ####################################
 
 - Install Python if it is not already done (If you try to run the script, it will sugest you to install it from windows store, at least on W11)
+- Download the latest release [here](https://github.com/qu4ntik/Minecraft-stats-combiner/releases).
 - Launch main.py and follow the instructions.
-- You can use two differents methods to combine your stats :
+
+You can use two differents methods to combine your stats :
 
 (EASY) You can copy and paste your minecraft or curseforge path folder and the script will automatically import and export data from all your stats files.
 
