@@ -5,7 +5,7 @@ I decided to create it because I realized I couldn't find one.
 
 Can maybe be a bit buggy but the main fonctionality is working fine (locally at least)
 
-#################################### How it's working ####################################
+#################################### How it's working #####################################
 
 - Install Python if it is not already done (If you try to run the script, it will sugest you to install it from windows store, at least on W11)
 - Download the latest release [here](https://github.com/qu4ntik/Minecraft-stats-combiner/releases).
@@ -31,10 +31,10 @@ Example :
 
 ![Capture d'écran 2024-01-02 121449](https://github.com/qu4ntik/Minecraft-stats-combiner/assets/113895291/020e5021-73a9-44ea-9f12-8640bd75bc0e)
 
-########################### How to combine severals folders ##############################
+############################# How to combine severals folders ###############################
 
 1. Use the advanced (2) method to generate a .json for every one of your minecraft/curseforge folder.
 2. Put theses files in stats_folder.
 3. Run the easy (1) method.
 
-##########################################################################################
+#######################################################################################
