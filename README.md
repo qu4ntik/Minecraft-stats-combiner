@@ -5,7 +5,7 @@ I decided to create it because I realized I couldn't find one.
 
 Can maybe be a bit buggy but the main fonctionality is working fine (locally at least)
 
-#################################### How it's working #####################################
+#################################### How it's working ####################################
 
 - Install Python if it is not already done (If you try to run the script, it will sugest you to install it from windows store, at least on W11)
 - Download the latest release [here](https://github.com/qu4ntik/Minecraft-stats-combiner/releases).
@@ -17,7 +17,7 @@ You can use two differents methods to combine your stats :
 
 (ADVANCED) You have to regroup your stats files into "stats_folder", theses files are located in the stats folder of any maps.
 
-######################################## Features ########################################
+######################################## Features #######################################
 
 - Automatically detect your player UUID and rename the combined file with it.
 - Automatically detect if you already have generated a .json and will adapt the combined stats file name.
@@ -37,4 +37,4 @@ Example :
 2. Put theses files in stats_folder.
 3. Run the easy (1) method.
 
-#######################################################################################
+######################################################################################
